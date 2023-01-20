@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+
+  wordpress:
+    image: wordpress:5.7.2-php8.0-apache
+    restart: always
+    ports:
+      - 80:80
+    environment:
+      WORDPRESS_DB_HOST: changeme
+      WORDPRESS_DB_USER: changeme
+      WORDPRESS_DB_PASSWORD: changeme
+      WORDPRESS_DB_NAME: changeme
+    volumes:
+      - wordpress:/var/www/html
